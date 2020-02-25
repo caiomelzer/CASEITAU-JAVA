@@ -109,3 +109,8 @@ Response:
     ]
 }
 ```
+
+### Melhorias
+ - JWT
+ - Login e Senha do Usuário
+ - Ajuste do Ponto
