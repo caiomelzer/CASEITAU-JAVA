@@ -1,23 +1,12 @@
 package com.melzer.caseitau.service;
 import com.melzer.caseitau.model.Usuario;
 import com.melzer.caseitau.repository.UsuarioRepository;
-
-
-import java.time.ZonedDateTime;
-
-
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.web.server.ResponseStatusException;
-
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
