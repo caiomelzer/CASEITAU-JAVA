@@ -92,14 +92,4 @@ public class PontoServiceTest
 			pontoService.registrarPonto(1,"saida");
 		});
 	}
-	
-	@Test
-	public void testarPontoSaidadeErro2()
-	{	
-		Mockito.when(usuarioRepository.findById(1)).thenReturn(usuario);
-		Mockito.when(pontoRepository.ultimoRegistro(1)).thenReturn(null);
-		assertThrows(ResponseStatusException.class, () -> {
-			pontoService.registrarPonto(1,"saida");
-		});
-	}
 }
