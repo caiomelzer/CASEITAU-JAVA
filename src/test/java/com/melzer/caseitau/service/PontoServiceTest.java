@@ -52,10 +52,10 @@ public class PontoServiceTest
 	@Test
 	public void testarPontoSaidaSucesso()
 	{
-		Ponto ultimoPonto = new Ponto();
-		ultimoPonto.setTipo_ponto("entrada");
 		Mockito.when(usuarioRepository.findById(1)).thenReturn(usuario);
-		Mockito.when(pontoRepository.ultimoRegistro(1)).thenReturn(ultimoPonto);
+		Mockito.when(pontoRepository.ultimoRegistro(1)).thenReturn(null);
+		Mockito.when(pontoRepository.save(ArgumentMatchers.any(Ponto.class))).thenReturn(ponto);
+		assertNotNull(pontoService.registrarPonto(1,"entrada"));
 		Mockito.when(pontoRepository.save(ArgumentMatchers.any(Ponto.class))).thenReturn(ponto);
 		assertNotNull(pontoService.registrarPonto(1,"saida"));
 	}
